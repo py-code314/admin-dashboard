@@ -4,14 +4,15 @@ body {
   min-height: 100svh;
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  grid-template-rows: 1fr, 4fr;
+  grid-template-rows: auto;
   grid-template-areas: 
-    "sidebar header header header header"
-    "sidebar main main main main";
+    "sidebar header header header"
+    "sidebar main main main";
 }
 
 .sidebar {
   grid-area: sidebar;
+  
 }
 
 .header {
