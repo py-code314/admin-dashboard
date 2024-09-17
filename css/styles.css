@@ -185,4 +185,40 @@ body {
   display: grid;
   grid-template-columns: 4fr 1fr 1fr;
   place-items: end;
+}
+
+.sidebars {
+  display: grid;
+  grid-template-rows: repeat(2, 1fr);
+  gap: 1rem;
+}
+
+.announcements__content {
+  border: 1px solid black;
+  padding: 1rem;
+  display: grid;
+  grid-template-rows: repeat(3, 1fr);
+}
+
+.announcement {
+  padding: 1rem;
+  font-size: 14px;
+}
+
+.announcement:not(:last-child) {
+  border-bottom: 1px solid gray;
+}
+
+.trending__items {
+  border: 1px solid #000;
+  padding: 1rem;
+  display: grid;
+  grid-template-rows: repeat(4, 1fr);
+  gap: 1rem;
+}
+
+.trending__item {
+  display: grid;
+  grid-template-columns: 1fr 3fr;
+  align-items: center;
 }/*# sourceMappingURL=styles.css.map */
