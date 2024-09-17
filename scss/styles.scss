@@ -10,7 +10,7 @@ body {
 		'sidebar main main main';
 }
 
-.sidebar {
+.nav {
 	grid-area: sidebar;
 	background-color: steelblue;
 	padding: 1rem;
@@ -20,19 +20,25 @@ body {
 	color: white;
 }
 
-.heading {
+.nav__heading {
 	display: grid;
 	grid-template-columns: 1fr 4fr;
 	align-items: center;
 	gap: 1rem;
 }
 
-.top-group,
-.bottom-group {
+.nav__links {
+  display: grid;
+  grid-template-rows: auto;
+  gap: 2rem;
+}
+
+.nav__links-top,
+.nav__links-bottom {
 	display: grid;
 	gap: 1rem;
 
-	div {
+	li {
 		display: grid;
 		grid-template-columns: 1fr 6fr;
 		align-items: center;
@@ -44,7 +50,7 @@ body {
 	}
 }
 
-.bottom-group {
+.nav__group2 {
 	align-content: start;
 }
 
@@ -56,8 +62,8 @@ body {
 	grid-template-rows: 1fr 2fr;
 }
 
-.first-row,
-.second-row {
+.header__row1,
+.header__row2 {
 	display: grid;
 	grid-template-columns: 2fr 1fr;
   gap: 1rem;
@@ -65,7 +71,7 @@ body {
 	
 }
 
-.first-row-left {
+.header__searchbar {
   display: grid;
   grid-template-columns: 1fr 10fr;
   align-items: center;
@@ -78,7 +84,7 @@ body {
 	}
 }
 
-.first-row-right {
+.header__profile {
   display: grid;
   grid-template-columns: repeat(2, 1fr) 2fr;
 
@@ -93,13 +99,13 @@ body {
   }
 }
 
-.second-row-left {
+.header__greeting {
   display: grid;
   grid-template-columns: 1fr 6fr;
   align-items: center;
 }
 
-.second-row-right {
+.header__buttons {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   align-items: center;
@@ -146,7 +152,7 @@ body {
   place-items: end;
 }
 
-.sidebars {
+.sidebar {
   display: grid;
   grid-template-rows: repeat(2, 1fr);
   gap: 1rem;

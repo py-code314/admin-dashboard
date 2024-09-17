@@ -8,12 +8,12 @@
 	</head>
 	<body>
 		<header class="header">
-			<div class="first-row">
-				<div class="first-row-left">
+			<div class="header__row1">
+				<div class="header__searchbar">
 					<img src="./images/search.svg" alt="" width="20" />
 					<input type="search" name="" id="" />
 				</div>
-				<div class="first-row-right">
+				<div class="header__profile">
 					<a href="#"
 						><img src="./images/notifications.svg" alt="" width="20"
 					/></a>
@@ -21,15 +21,15 @@
 					<p>Morgan Oakley</p>
 				</div>
 			</div>
-			<div class="second-row">
-				<div class="second-row-left">
+			<div class="header__row2">
+				<div class="header__greeting">
 					<img src="./images/user.svg" alt="" width="60" />
 					<div>
 						<p>Hi there,</p>
 						<h1>Morgan Oakley (@morgan)</h1>
 					</div>
 				</div>
-				<div class="second-row-right">
+				<div class="header__buttons">
 					<button>New</button>
 					<button>Upload</button>
 					<button>Share</button>
@@ -37,57 +37,59 @@
 			</div>
 		</header>
 
-		<aside class="sidebar">
-			<div class="heading">
+		<nav class="nav">
+			<div class="nav__heading">
 				<img src="./images/dashboard.svg" alt="" width="40" />
 				<h2>Dashboard</h2>
 			</div>
-			<div class="top-group">
-				<div>
-					<img src="./images/home.svg" alt="" width="20" /><a href="">Home</a>
-				</div>
-				<div>
-					<img src="./images/account.svg" alt="" width="20" /><a href=""
-						>Profile</a
-					>
-				</div>
-				<div>
-					<img src="./images/message.svg" alt="" width="20" /><a href=""
-						>Messages</a
-					>
-				</div>
-				<div>
-					<img src="./images/history.svg" alt="" width="20" /><a href=""
-						>History</a
-					>
-				</div>
-				<div>
-					<img src="./images/task.svg" alt="" width="20" /><a href="">Tasks</a>
-				</div>
-				<div>
-					<img src="./images/community.svg" alt="" width="20" /><a href=""
-						>Communities</a
-					>
-				</div>
-			</div>
-			<div class="bottom-group">
-				<div>
-					<img src="./images/settings.svg" alt="" width="20" /><a href=""
-						>Settings</a
-					>
-				</div>
-				<div>
-					<img src="./images/help.svg" alt="" width="20" /><a href=""
-						>Support</a
-					>
-				</div>
-				<div>
-					<img src="./images/privacy.svg" alt="" width="20" /><a href=""
-						>Privacy</a
-					>
-				</div>
-			</div>
-		</aside>
+			<div class="nav__links">
+        <ul class="nav__links-top">
+          <li>
+            <img src="./images/home.svg" alt="" width="20" /><a href="javascript:void(0)">Home</a>
+          </li>
+          <li>
+            <img src="./images/account.svg" alt="" width="20" /><a href="javascript:void(0)"
+              >Profile</a
+            >
+          </li>
+          <li>
+            <img src="./images/message.svg" alt="" width="20" /><a href="javascript:void(0)"
+              >Messages</a
+            >
+          </li>
+          <li>
+            <img src="./images/history.svg" alt="" width="20" /><a href="javascript:void(0)"
+              >History</a
+            >
+          </li>
+          <li>
+            <img src="./images/task.svg" alt="" width="20" /><a href="javascript:void(0)">Tasks</a>
+          </li>
+          <li>
+            <img src="./images/community.svg" alt="" width="20" /><a href="javascript:void(0)"
+              >Communities</a
+            >
+          </li>
+        </ul>
+        <ul class="nav__links-bottom">
+          <li>
+            <img src="./images/settings.svg" alt="" width="20" /><a href="javascript:void(0)"
+              >Settings</a
+            >
+          </li>
+          <li>
+            <img src="./images/help.svg" alt="" width="20" /><a href="javascript:void(0)"
+              >Support</a
+            >
+          </li>
+          <li>
+            <img src="./images/privacy.svg" alt="" width="20" /><a href="javascript:void(0)"
+              >Privacy</a
+            >
+          </li>
+        </ul>
+      </div>
+		</nav>
 
 		<main class="main">
 			<div class="projects__container">
@@ -180,7 +182,7 @@
           </div>
         </div>
 			</div>
-			<div class="sidebars">
+			<div class="sidebar">
 				<div class="announcements">
 					<h2 class="announcements__title">Announcements</h2>
 					<div class="announcements__content">
