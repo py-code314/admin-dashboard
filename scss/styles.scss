@@ -70,10 +70,6 @@ body {
   grid-template-columns: 1fr 10fr;
   align-items: center;
 	
-
-  img {
-    // justify-self: center;
-  }
 	input {
     align-self: center;
 		border: none;
@@ -103,6 +99,28 @@ body {
   align-items: center;
 }
 
+.second-row-right {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  align-items: center;
+  gap: 1rem;
+
+  button {
+    border: none;
+    border-radius: 50px;
+    background-color: #0b7b21;
+    color: white;
+    padding: 0.3rem;
+
+  }
+}
+
 .main {
 	grid-area: main;
+  // display: grid;
+  // grid-template-columns: 3fr 1fr;
+  // padding: 1rem;
+  // gap: 1rem;
 }
+
+
