@@ -1,55 +1,108 @@
 @use './reset';
 
 body {
-  min-height: 100svh;
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  grid-template-rows: 20vh 80vh;
-  grid-template-areas: 
-    "sidebar header header header"
-    "sidebar main main main";
+	min-height: 100svh;
+	display: grid;
+	grid-template-columns: repeat(4, 1fr);
+	grid-template-rows: 20vh 80vh;
+	grid-template-areas:
+		'sidebar header header header'
+		'sidebar main main main';
 }
 
 .sidebar {
-  grid-area: sidebar;
-  background-color: steelblue;
-  padding: 1rem;
-  display: grid;
-  grid-template-rows: 1fr 3fr 7fr;
-  row-gap: 3rem;
-  color: white;
+	grid-area: sidebar;
+	background-color: steelblue;
+	padding: 1rem;
+	display: grid;
+	grid-template-rows: 1fr 3fr 7fr;
+	row-gap: 3rem;
+	color: white;
 }
 
 .heading {
-  display: flex;
-  align-items: center;
-  gap: 1rem;
+	display: grid;
+	grid-template-columns: 1fr 4fr;
+	align-items: center;
+	gap: 1rem;
 }
 
 .top-group,
 .bottom-group {
-  display: grid;
-  gap: 1rem;
+	display: grid;
+	gap: 1rem;
 
-  div {
-    display: flex;
-    align-items: center;
-    gap: 1rem;
-  }
-  a {
-    color: white;
-    text-decoration: none;
-  }
+	div {
+		display: grid;
+		grid-template-columns: 1fr 6fr;
+		align-items: center;
+		gap: 1rem;
+	}
+	a {
+		color: white;
+		text-decoration: none;
+	}
 }
 
 .bottom-group {
-  align-content: start;
+	align-content: start;
 }
 
 .header {
-  grid-area: header;
+	grid-area: header;
+	padding: 1rem 2rem;
+	background-color: #e67474;
+	display: grid;
+	grid-template-rows: 1fr 2fr;
+}
+
+.first-row,
+.second-row {
+	display: grid;
+	grid-template-columns: 2fr 1fr;
+  gap: 1rem;
+
+	
+}
+
+.first-row-left {
+  display: grid;
+  grid-template-columns: 1fr 10fr;
+  align-items: center;
+	
+
+  img {
+    // justify-self: center;
+  }
+	input {
+    align-self: center;
+		border: none;
+		border-radius: 50px;
+		padding: 0.25rem;
+	}
+}
+
+.first-row-right {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr) 2fr;
+
+  a,
+  img {
+    place-self: center;
+  }
+
+  p {
+    justify-self: start;
+    align-self: center;
+  }
+}
+
+.second-row-left {
+  display: grid;
+  grid-template-columns: 1fr 6fr;
+  align-items: center;
 }
 
 .main {
-  grid-area: main;
+	grid-area: main;
 }

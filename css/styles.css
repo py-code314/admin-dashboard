@@ -72,7 +72,8 @@ body {
 }
 
 .heading {
-  display: flex;
+  display: grid;
+  grid-template-columns: 1fr 4fr;
   align-items: center;
   gap: 1rem;
 }
@@ -84,7 +85,8 @@ body {
 }
 .top-group div,
 .bottom-group div {
-  display: flex;
+  display: grid;
+  grid-template-columns: 1fr 6fr;
   align-items: center;
   gap: 1rem;
 }
@@ -100,6 +102,63 @@ body {
 
 .header {
   grid-area: header;
+  padding: 1rem 2rem;
+  background-color: #e67474;
+  display: grid;
+  grid-template-rows: 1fr 2fr;
+}
+
+.first-row,
+.second-row {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 1rem;
+}
+
+.first-row-left {
+  display: grid;
+  grid-template-columns: 1fr 10fr;
+  align-items: center;
+}
+.first-row-left input {
+  align-self: center;
+  border: none;
+  border-radius: 50px;
+  padding: 0.25rem;
+}
+
+.first-row-right {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr) 2fr;
+}
+.first-row-right a,
+.first-row-right img {
+  place-self: center;
+}
+.first-row-right p {
+  justify-self: start;
+  align-self: center;
+}
+
+.second-row-left {
+  display: grid;
+  grid-template-columns: 1fr 6fr;
+  align-items: center;
+}
+
+.second-row-right {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  align-items: center;
+  gap: 1rem;
+
+  button {
+    border: none;
+    border-radius: 50px;
+    padding: 0.3rem;
+    background-color: #0a4a04;
+    color: white;
+  }
 }
 
 .main {
