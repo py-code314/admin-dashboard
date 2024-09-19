@@ -125,6 +125,7 @@ body {
 	grid-area: main;
   @include grid-col-2(3fr, 1fr, $space-md, normal);
 	padding: $space-md;
+  background-color: #f5f3e5;
 }
 
 .projects {
@@ -134,8 +135,11 @@ body {
 .project {
 	display: grid;
 	grid-template-rows: 1fr 5fr 1fr;
-	border: 1px solid black;
+	border: 1px solid #f5f3e5;
+  border-left: 10px solid orange;
+  border-radius: 10px;
 	padding: $space-md;
+  background-color: #fafaff;
 }
 
 .project__title {
@@ -153,6 +157,7 @@ body {
 	border: 1px solid black;
 	padding: $space-md;
 	display: grid;
+  background-color: #fafaff;
 }
 
 .announcement:nth-child(1) {
@@ -181,6 +186,7 @@ body {
 	border: 1px solid #000;
 	padding: $space-md;
   @include grid-row($space-md);
+  background-color: #fafaff;
 }
 
 .trending__item {
