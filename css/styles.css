@@ -55,7 +55,7 @@ p, h1, h2, h3, h4, h5, h6 {
 }
 
 body {
-  height: 100svh;
+  min-height: 100svh;
   display: grid;
   grid-template-columns: auto 1fr;
   gap: 0;
@@ -206,15 +206,20 @@ body {
 
 .main {
   grid-area: main;
-  display: grid;
-  grid-template-columns: 3fr 1fr;
-  gap: 2rem;
-  align-items: normal;
   padding: 2rem;
   background-color: hsl(199, 64%, 90%);
 }
 .main h2 {
   margin-block-end: 0.625rem;
+}
+
+.main__content {
+  display: grid;
+  grid-template-columns: 3fr 1fr;
+  gap: 2rem;
+  align-items: normal;
+  width: min(80%, 1200px);
+  margin: auto;
 }
 
 .projects {
@@ -255,6 +260,7 @@ body {
   padding: 1.5rem;
   background-color: hsl(0, 0%, 100%);
   box-shadow: 5px 5px 10px 0px rgba(0, 0, 0, 0.75);
+  margin-block-end: 2rem;
 }
 
 .announcement:nth-child(1) {

@@ -4,7 +4,7 @@
 
 
 body {
-	height: 100svh;
+	min-height: 100svh;
   @include grid-col-2(auto, 1fr, 0, normal);
 	grid-template-areas: 'nav container';
 	font-family: 'Montserrat', sans-serif;
@@ -135,13 +135,19 @@ body {
 
 .main {
 	grid-area: main;
-  @include grid-col-2(3fr, 1fr, $space-xl, normal);
+  // @include grid-col-2(3fr, 1fr, $space-xl, normal);
 	padding: $space-xl;
   background-color: $bg-clr-main;
 
   h2 {
     margin-block-end: $space-sm;
   }
+}
+
+.main__content {
+  @include grid-col-2(3fr, 1fr, $space-xl, normal);
+  width: min(80%, 1200px);
+  margin: auto
 }
 
 .projects {
@@ -174,6 +180,7 @@ body {
 .announcements__content {
 	display: grid;
   @include card;
+  margin-block-end: $space-xl;
 }
 
 .announcement:nth-child(1) {
