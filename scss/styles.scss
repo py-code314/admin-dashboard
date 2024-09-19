@@ -23,14 +23,15 @@ body {
 .nav__heading {
   @include grid-col-2(1fr, 4fr, $space-md, center);
 
-	h2 {
+	h1 {
 		font-family: 'Cabin Sketch', sans-serif;
-    font-size: $fs-nav-heading;
+    font-size: $fs-title;
 	}
 }
 
 .nav__links {
   @include grid-row($space-xl);
+  padding-inline-start: $space-sm;
 }
 
 .nav__links-top,
@@ -65,7 +66,7 @@ body {
 	z-index: 99;
 	padding: $space-md $space-lg;
 	background-color: $bg-clr-header;
-  @include grid-row($space-sm);
+  @include grid-row($space-md);
   color: $bg-clr-navbar;
   font-weight: $fw-medium;
   font-size: $fs-navlink;
@@ -108,11 +109,17 @@ body {
 .header__greeting {
   @include grid-col-2(1fr, 6fr, 0, center);
 
-	h1 {
-		font-family: 'Cabin Sketch', sans-serif;
-    font-size: $fs-h1;
-	}
+	
+  div {
+    line-height: 1;
+  }
 }
+
+.header__name {
+		font-family: 'Cabin Sketch', sans-serif;
+    font-size: $fs-name;
+    font-weight: $fw-bold;
+	}
 
 .header__buttons {
   @include grid-col-3(1fr, 1fr, 1fr, $space-md, center);
