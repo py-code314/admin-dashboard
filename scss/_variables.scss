@@ -1,0 +1,14 @@
+@use './functions' as *;
+
+
+@import url('https://fonts.googleapis.com/css2?family=Cabin+Sketch:wght@400;700&family=Cabin:ital,wght@0,400..700;1,400..700&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+$space-xs: pxToRem(4);
+$space-sm: pxToRem(5);
+$space-md: pxToRem(16);
+$space-lg: pxToRem(32);
+$space-xl: pxToRem(48);
+
+
+$fw-bold: 700;
+$fs-announcement: pxToRem(14);
