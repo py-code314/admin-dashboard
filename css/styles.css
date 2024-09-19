@@ -208,9 +208,9 @@ body {
   grid-area: main;
   display: grid;
   grid-template-columns: 3fr 1fr;
-  gap: 1rem;
+  gap: 2rem;
   align-items: normal;
-  padding: 1rem;
+  padding: 2rem;
   background-color: hsl(199, 64%, 90%);
 }
 .main h2 {
@@ -229,9 +229,9 @@ body {
   grid-template-rows: 1fr 3fr 1fr;
   border-left: 10px solid hsl(32, 92%, 56%);
   border-radius: 10px;
-  padding: 1rem;
+  padding: 1.5rem;
   background-color: hsl(0, 0%, 100%);
-  box-shadow: 5px 5px 15px 0px rgba(0, 0, 0, 0.75);
+  box-shadow: 5px 5px 10px 0px rgba(0, 0, 0, 0.75);
 }
 .project h3 {
   font-size: 1.25rem;
@@ -250,9 +250,11 @@ body {
 }
 
 .announcements__content {
-  padding: 1rem;
   display: grid;
+  border-radius: 10px;
+  padding: 1.5rem;
   background-color: hsl(0, 0%, 100%);
+  box-shadow: 5px 5px 10px 0px rgba(0, 0, 0, 0.75);
 }
 
 .announcement:nth-child(1) {
@@ -279,10 +281,12 @@ body {
 }
 
 .trending__items {
-  padding: 1rem;
   display: grid;
   gap: 1rem;
+  border-radius: 10px;
+  padding: 1.5rem;
   background-color: hsl(0, 0%, 100%);
+  box-shadow: 5px 5px 10px 0px rgba(0, 0, 0, 0.75);
 }
 
 .trending__item {
@@ -290,4 +294,8 @@ body {
   grid-template-columns: 1fr 3fr;
   gap: 0;
   align-items: center;
+}
+
+.trending__name {
+  font-weight: 600;
 }/*# sourceMappingURL=styles.css.map */

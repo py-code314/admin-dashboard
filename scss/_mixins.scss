@@ -20,3 +20,10 @@
   gap: $gap;
 }
 
+@mixin card {
+  border-radius: 10px;
+	padding: $space-lg;
+  background-color: $txt-clr-nav;
+ box-shadow: 5px 5px 10px 0px rgba(0,0,0,0.75);
+}
+

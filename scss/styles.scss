@@ -135,8 +135,8 @@ body {
 
 .main {
 	grid-area: main;
-  @include grid-col-2(3fr, 1fr, $space-md, normal);
-	padding: $space-md;
+  @include grid-col-2(3fr, 1fr, $space-xl, normal);
+	padding: $space-xl;
   background-color: $bg-clr-main;
 
   h2 {
@@ -152,10 +152,7 @@ body {
 	display: grid;
 	grid-template-rows: 1fr 3fr 1fr;
   border-left: 10px solid $card-border-clr;
-  border-radius: 10px;
-	padding: $space-md;
-  background-color: $txt-clr-nav;
- box-shadow: 5px 5px 15px 0px rgba(0,0,0,0.75);
+  @include card;
 
  h3 {
   font-size: $fs-navlink;
@@ -175,9 +172,8 @@ body {
 }
 
 .announcements__content {
-	padding: $space-md;
 	display: grid;
-  background-color: $txt-clr-nav;
+  @include card;
 }
 
 .announcement:nth-child(1) {
@@ -203,11 +199,14 @@ body {
 	margin-block: $space-md;
 }
 .trending__items {
-	padding: $space-md;
   @include grid-row($space-md);
-  background-color: $txt-clr-nav;
+  @include card;
 }
 
 .trending__item {
   @include grid-col-2(1fr, 3fr, 0, center);
+}
+
+.trending__name {
+  font-weight: $fw-semibold;
 }
