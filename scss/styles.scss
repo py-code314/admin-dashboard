@@ -1,12 +1,12 @@
 @use './reset';
+// @use './functions' as *;
 @use './variables' as *;
-@use './functions' as *;
+@use './mixins' as *;
+
 
 body {
 	height: 100svh;
-	display: grid;
-	grid-template-columns: auto 1fr;
-
+  @include grid-col-2(auto, 1fr, 0, normal);
 	grid-template-areas: 'nav container';
 	font-family: 'Montserrat', sans-serif;
 }
@@ -17,19 +17,12 @@ body {
 	padding: $space-md;
 	display: grid;
 	row-gap: $space-xl;
-
 	align-content: start;
-
 	color: white;
 }
 
 .nav__heading {
-	display: grid;
-	grid-template-columns: 1fr 4fr;
-
-	gap: $space-md;
-
-	align-items: center;
+  @include grid-col-2(1fr, 4fr, $space-md, center);
 
 	h2 {
 		font-family: 'Cabin Sketch', sans-serif;
@@ -37,24 +30,17 @@ body {
 }
 
 .nav__links {
-	display: grid;
-
-	gap: $space-xl;
+  @include grid-row($space-xl);
 }
 
 .nav__links-top,
 .nav__links-bottom {
-	display: grid;
-	gap: $space-md;
+  @include grid-row($space-md);
 
 	li {
-		display: grid;
-		grid-template-columns: 1fr 6fr;
-
-		gap: $space-md;
-
-		align-items: center;
+    @include grid-col-2(1fr, 6fr, $space-md, center);
 	}
+
 	a {
 		color: white;
 		text-decoration: none;
@@ -63,8 +49,7 @@ body {
 
 .container {
 	grid-area: container;
-	display: grid;
-	grid-template-rows: auto 1fr;
+  @include grid-col-2(auto, 1fr, 0, normal);
 
 	grid-template-areas:
 		'header'
@@ -84,16 +69,12 @@ body {
 
 .header__row1,
 .header__row2 {
-	display: grid;
-	grid-template-columns: 2fr 1fr;
-	gap: $space-lg;
+  @include grid-col-2(2fr, 1fr, $space-lg, normal);
+  align-items: normal;
 }
 
 .header__searchbar {
-	display: grid;
-	grid-template-columns: 1fr 10fr;
-
-	align-items: center;
+  @include grid-col-2(1fr, 10fr, 0, center);
 
 	input {
 		align-self: center;
@@ -104,8 +85,7 @@ body {
 }
 
 .header__profile {
-	display: grid;
-	grid-template-columns: repeat(2, 1fr) 2fr;
+  @include grid-col-3(1fr, 1fr, 2fr, 0, normal);
 
 	a {
 		justify-self: end;
@@ -122,10 +102,7 @@ body {
 }
 
 .header__greeting {
-	display: grid;
-	grid-template-columns: 1fr 6fr;
-
-	align-items: center;
+  @include grid-col-2(1fr, 6fr, 0, center);
 
 	h1 {
 		font-family: 'Cabin Sketch', sans-serif;
@@ -133,11 +110,8 @@ body {
 }
 
 .header__buttons {
-	display: grid;
-	grid-template-columns: repeat(3, 1fr);
-	align-items: center;
-	gap: $space-md;
-
+  @include grid-col-3(1fr, 1fr, 1fr, $space-md, center);
+	
 	button {
 		border: 1px solid #0b7b21;
 		border-radius: 50px;
@@ -149,19 +123,12 @@ body {
 
 .main {
 	grid-area: main;
-	display: grid;
-	grid-template-columns: 3fr 1fr;
-
-	gap: $space-md;
-
+  @include grid-col-2(3fr, 1fr, $space-md, normal);
 	padding: $space-md;
 }
 
 .projects {
-	display: grid;
-	grid-template-columns: repeat(2, 1fr);
-
-	gap: $space-md;
+  @include grid-col-2(1fr, 1fr, $space-md, normal);
 }
 
 .project {
@@ -213,14 +180,9 @@ body {
 .trending__items {
 	border: 1px solid #000;
 	padding: $space-md;
-	display: grid;
-
-	gap: $space-md;
+  @include grid-row($space-md);
 }
 
 .trending__item {
-	display: grid;
-	grid-template-columns: 1fr 3fr;
-
-	align-items: center;
+  @include grid-col-2(1fr, 3fr, 0, center);
 }

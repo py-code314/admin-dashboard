@@ -58,6 +58,8 @@ body {
   height: 100svh;
   display: grid;
   grid-template-columns: auto 1fr;
+  gap: 0;
+  align-items: normal;
   grid-template-areas: "nav container";
   font-family: "Montserrat", sans-serif;
 }
@@ -108,7 +110,9 @@ body {
 .container {
   grid-area: container;
   display: grid;
-  grid-template-rows: auto 1fr;
+  grid-template-columns: auto 1fr;
+  gap: 0;
+  align-items: normal;
   grid-template-areas: "header" "main";
 }
 
@@ -128,11 +132,14 @@ body {
   display: grid;
   grid-template-columns: 2fr 1fr;
   gap: 2rem;
+  align-items: normal;
+  align-items: normal;
 }
 
 .header__searchbar {
   display: grid;
   grid-template-columns: 1fr 10fr;
+  gap: 0;
   align-items: center;
 }
 .header__searchbar input {
@@ -144,7 +151,9 @@ body {
 
 .header__profile {
   display: grid;
-  grid-template-columns: repeat(2, 1fr) 2fr;
+  grid-template-columns: 1fr 1fr 2fr;
+  gap: 0;
+  align-items: normal;
 }
 .header__profile a {
   justify-self: end;
@@ -161,6 +170,7 @@ body {
 .header__greeting {
   display: grid;
   grid-template-columns: 1fr 6fr;
+  gap: 0;
   align-items: center;
 }
 .header__greeting h1 {
@@ -169,9 +179,9 @@ body {
 
 .header__buttons {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  align-items: center;
+  grid-template-columns: 1fr 1fr 1fr;
   gap: 1rem;
+  align-items: center;
 }
 .header__buttons button {
   border: 1px solid #0b7b21;
@@ -186,13 +196,15 @@ body {
   display: grid;
   grid-template-columns: 3fr 1fr;
   gap: 1rem;
+  align-items: normal;
   padding: 1rem;
 }
 
 .projects {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: 1fr 1fr;
   gap: 1rem;
+  align-items: normal;
 }
 
 .project {
@@ -252,5 +264,6 @@ body {
 .trending__item {
   display: grid;
   grid-template-columns: 1fr 3fr;
+  gap: 0;
   align-items: center;
 }/*# sourceMappingURL=styles.css.map */

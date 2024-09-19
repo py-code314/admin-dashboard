@@ -1,0 +1,22 @@
+@use './variables' as *;
+
+@mixin grid-col-2($col1, $col2, $gap, $ai) {
+  display: grid;
+  grid-template-columns: $col1 $col2;
+  gap: $gap;
+  align-items: $ai;
+}
+
+@mixin grid-col-3($col1, $col2, $col3, $gap, $ai) {
+  display: grid;
+  grid-template-columns: $col1 $col2 $col3;
+  gap: $gap;
+  align-items: $ai;
+}
+
+
+@mixin grid-row($gap) {
+  display: grid;
+  gap: $gap;
+}
+
