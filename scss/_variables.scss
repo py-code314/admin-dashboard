@@ -3,14 +3,23 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Cabin+Sketch:wght@400;700&family=Cabin:ital,wght@0,400..700;1,400..700&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
 
-$space-xs: pxToRem(4);
-$space-sm: pxToRem(5);
+$space-xs: pxToRem(5);
+$space-sm: pxToRem(10);
+
 $space-md: pxToRem(16);
 $space-lg: pxToRem(32);
 $space-xl: pxToRem(48);
 
-
+$fw-semibold: 600;
 $fw-bold: 700;
+
 $fs-announcement: pxToRem(14);
 $fs-nav-heading: pxToRem(32);
 $fs-navlink: pxToRem(20);
+$fs-h1: pxToRem(48);
+
+$bg-clr-navbar: hsl(200, 95%, 14%);
+$bg-clr-header: hsl(192, 70%, 43%);
+$bg-clr-main: hsl(199, 64%, 90%);
+$txt-clr-nav: hsl(0, 0%, 100%);
+$card-border-clr: hsl(32, 92%, 56%);
