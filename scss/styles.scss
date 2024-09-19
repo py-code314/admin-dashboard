@@ -135,8 +135,7 @@ body {
 
 .main {
 	grid-area: main;
-  // @include grid-col-2(3fr, 1fr, $space-xl, normal);
-	padding: $space-xl;
+	padding: $space-xl 0;
   background-color: $bg-clr-main;
 
   h2 {
@@ -146,7 +145,7 @@ body {
 
 .main__content {
   @include grid-col-2(3fr, 1fr, $space-xl, normal);
-  width: min(80%, 1200px);
+  width: min(90%, 1200px);
   margin: auto
 }
 
@@ -157,7 +156,7 @@ body {
 .project {
 	display: grid;
 	grid-template-rows: 1fr 3fr 1fr;
-  border-left: 10px solid $card-border-clr;
+  border-left: 10px solid $accent-clr-1;
   @include card;
 
  h3 {
@@ -181,6 +180,8 @@ body {
 	display: grid;
   @include card;
   margin-block-end: $space-xl;
+  border-left: 10px solid $accent-clr-3;
+  
 }
 
 .announcement:nth-child(1) {
@@ -208,6 +209,7 @@ body {
 .trending__items {
   @include grid-row($space-md);
   @include card;
+  border-left: 10px solid $accent-clr-2;
 }
 
 .trending__item {

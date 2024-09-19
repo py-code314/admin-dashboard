@@ -206,7 +206,7 @@ body {
 
 .main {
   grid-area: main;
-  padding: 2rem;
+  padding: 2rem 0;
   background-color: hsl(199, 64%, 90%);
 }
 .main h2 {
@@ -218,7 +218,7 @@ body {
   grid-template-columns: 3fr 1fr;
   gap: 2rem;
   align-items: normal;
-  width: min(80%, 1200px);
+  width: min(90%, 1200px);
   margin: auto;
 }
 
@@ -261,6 +261,7 @@ body {
   background-color: hsl(0, 0%, 100%);
   box-shadow: 5px 5px 10px 0px rgba(0, 0, 0, 0.75);
   margin-block-end: 2rem;
+  border-left: 10px solid hsl(185, 100%, 23%);
 }
 
 .announcement:nth-child(1) {
@@ -293,6 +294,7 @@ body {
   padding: 1.5rem;
   background-color: hsl(0, 0%, 100%);
   box-shadow: 5px 5px 10px 0px rgba(0, 0, 0, 0.75);
+  border-left: 10px solid hsl(265, 83%, 57%);
 }
 
 .trending__item {
