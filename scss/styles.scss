@@ -15,7 +15,7 @@ body {
   background-color: $bg-clr-navbar;
 	padding: $space-md;
 	display: grid;
-	row-gap: $space-xl;
+	row-gap: $space-2xl;
 	align-content: start;
 	color: $txt-clr-nav;
 }
@@ -30,7 +30,7 @@ body {
 }
 
 .nav__links {
-  @include grid-row($space-xl);
+  @include grid-row($space-2xl);
   padding-inline-start: $space-sm;
 }
 
@@ -64,7 +64,7 @@ body {
 	position: sticky;
 	top: 0;
 	z-index: 99;
-	padding: $space-md $space-lg;
+	padding: $space-md $space-xl;
 	background-color: $bg-clr-header;
   @include grid-row($space-md);
   color: $bg-clr-navbar;
@@ -74,7 +74,7 @@ body {
 
 .header__row1,
 .header__row2 {
-  @include grid-col-2(2fr, 1fr, $space-lg, normal);
+  @include grid-col-2(2fr, 1fr, $space-xl, normal);
   border-radius: 5px;
 }
 
@@ -138,19 +138,29 @@ body {
   @include grid-col-2(3fr, 1fr, $space-md, normal);
 	padding: $space-md;
   background-color: $bg-clr-main;
+
+  h2 {
+    margin-block-end: $space-sm;
+  }
 }
 
 .projects {
-  @include grid-col-2(1fr, 1fr, $space-md, normal);
+  @include grid-col-2(1fr, 1fr, $space-lg, normal);
 }
 
 .project {
 	display: grid;
-	grid-template-rows: 1fr 5fr 1fr;
+	grid-template-rows: 1fr 3fr 1fr;
   border-left: 10px solid $card-border-clr;
   border-radius: 10px;
 	padding: $space-md;
   background-color: $txt-clr-nav;
+ box-shadow: 5px 5px 15px 0px rgba(0,0,0,0.75);
+
+ h3 {
+  font-size: $fs-navlink;
+  margin-block-end: $space-sm;
+ }
 }
 
 .project__title {
