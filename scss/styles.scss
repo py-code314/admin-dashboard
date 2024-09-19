@@ -150,7 +150,10 @@ body {
 }
 
 .projects {
-  @include grid-col-2(1fr, 1fr, $space-lg, normal);
+  // @include grid-col-2(1fr, 1fr, $space-lg, normal);
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: $space-md;
 }
 
 .project {
