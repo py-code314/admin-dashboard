@@ -25,7 +25,7 @@ body {
 
 	h1 {
 		font-family: 'Cabin Sketch', sans-serif;
-    font-size: $fs-title;
+    font-size: clamp(1.5rem, 1.179rem + 1.607vw, 2.625rem);
 	}
 }
 
@@ -46,7 +46,7 @@ body {
 		color: $txt-clr-nav;
 		text-decoration: none;
     font-weight: $fw-medium;
-    font-size: $fs-navlink;
+    font-size: clamp(0.7rem, 0.543rem + 0.786vw, 1.25rem);
     display: inline-block;
     // padding: $space-xs;
     transition: all 0.3s ease;
@@ -82,23 +82,38 @@ body {
   @include grid-row($space-md);
   color: $bg-clr-navbar;
   font-weight: $fw-medium;
-  font-size: $fs-navlink;
+  font-size: clamp(0.7rem, 0.543rem + 0.786vw, 1.25rem);
 }
 
 .header__row1,
 .header__row2 {
   @include grid-col-2(2fr, 1fr, $space-xl, normal);
-  border-radius: 5px;
+  // border-radius: 5px;
+}
+
+.header__row1 {
+  @include respond {
+    justify-items: stretch;
+  }
+  
+}
+.header__row2 {
+  @include respond {
+    grid-template-columns: 1fr;
+    gap: $space-sm;
+  }
 }
 
 .header__searchbar {
-  @include grid-col-2(1fr, 16fr, 0, center);
+  @include grid-col-2(30px, 1fr, 0, center);
 
 	input {
 		align-self: center;
 		border: 1px solid $bg-clr-header;
 		border-radius: 50px;
-		padding: $space-xs;
+		padding: clamp(0rem, -0.136rem + 0.68vw, 0.476rem);
+
+    
 	}
 
   input:focus {
@@ -121,11 +136,21 @@ body {
   }
 	img {
 		place-self: center;
+    
 	}
+  > img {
+    @include respond {
+      display: none;
+    }
+  }
 
 	p {
 		justify-self: start;
 		align-self: center;
+
+    @include respond {
+      display: none;
+    }
 	}
 }
 
@@ -135,12 +160,24 @@ body {
 	
   div {
     line-height: 1;
+    @include respond {
+      @include grid-col-2(1fr, 2fr, 0, center)
+    }
+  }
+  img {
+    @include respond {
+      display: none;
+    }
+  }
+
+  @include respond {
+    grid-template-columns: 1fr;
   }
 }
 
 .header__name {
 		font-family: 'Cabin Sketch', sans-serif;
-    font-size: $fs-name;
+    font-size: clamp(1rem, 0.714rem + 1.429vw, 2rem);
     font-weight: $fw-bold;
 	}
 
@@ -152,7 +189,7 @@ body {
 		border-radius: 50px;
 		background-color: $bg-clr-navbar;
 		color: $txt-clr-nav;
-		padding: $space-xs $space-sm;
+		padding: $space-2xs $space-md;
     cursor: pointer;
     transition: all 0.3s;
 	}
@@ -169,12 +206,23 @@ body {
   h2 {
     margin-block-end: $space-sm;
   }
+  
 }
 
 .main__content {
-  @include grid-col-2(3fr, 1fr, $space-xl, normal);
+  @include grid-col-2(2fr, 1fr, $space-xl, normal);
   width: min(90%, 1200px);
-  margin: auto
+  margin: auto;
+
+  @include respond {
+    display: grid;
+    grid-template-columns: 1fr;
+    @include grid-row($space-lg);
+  }
+
+  h2 {
+    font-size: clamp(1.2rem, 1.114rem + 0.429vw, 1.5rem);
+  }
 }
 
 .projects {
