@@ -340,7 +340,7 @@ body {
 }
 
 .trending__item {
-  @include grid-col-2(1fr, 3fr, 0, center);
+  @include grid-col-2(40px, 5fr, $space-md, center);
 }
 
 .trending__name {
