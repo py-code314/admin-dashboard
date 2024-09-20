@@ -33,7 +33,7 @@ p, h1, h2, h3, h4, h5, h6 {
 body {
   min-height: 100svh;
   display: grid;
-  grid-template-columns: auto 1fr;
+  grid-template-columns: 15rem 1fr;
   gap: 0;
   align-items: normal;
   grid-template-areas: "nav container";
@@ -67,13 +67,13 @@ body {
 
 .nav__heading {
   display: grid;
-  grid-template-columns: 1fr 4fr;
-  gap: 1rem;
+  grid-template-columns: 40px 1fr;
+  gap: 0.3125rem;
   align-items: center;
 }
 .nav__heading h1 {
   font-family: "Cabin Sketch", sans-serif;
-  font-size: clamp(1.5rem, 1.179rem + 1.607vw, 2.625rem);
+  font-size: clamp(1.5rem, 1.3rem + 1vw, 2.2rem);
 }
 .nav__heading button {
   background-color: hsl(200, 95%, 14%);
@@ -176,7 +176,11 @@ body {
 /* Media queries at 840px */
 @media (max-width: 48em) {
   .header__row1 {
-    justify-items: stretch;
+    display: grid;
+    grid-template-columns: 1fr 3fr 1fr;
+    gap: 0;
+    align-items: center;
+    grid-template-areas: ". searchbar profile";
   }
 }
 
@@ -189,7 +193,7 @@ body {
 
 .header__searchbar {
   display: grid;
-  grid-template-columns: 30px 1fr;
+  grid-template-columns: 1fr 10fr;
   gap: 0;
   align-items: center;
 }
@@ -201,6 +205,11 @@ body {
 }
 .header__searchbar input:focus {
   outline: 2px solid hsl(2, 78%, 60%);
+}
+@media (max-width: 48em) {
+  .header__searchbar {
+    grid-area: searchbar;
+  }
 }
 
 .header__profile {
@@ -236,6 +245,11 @@ body {
     display: none;
   }
 }
+@media (max-width: 48em) {
+  .header__profile {
+    grid-area: profile;
+  }
+}
 
 .header__greeting {
   display: grid;
@@ -252,6 +266,7 @@ body {
     grid-template-columns: 1fr 2fr;
     gap: 0;
     align-items: center;
+    justify-items: center;
   }
 }
 @media (max-width: 48em) {
