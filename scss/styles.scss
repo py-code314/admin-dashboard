@@ -9,6 +9,7 @@ body {
   @include grid-col-2(auto, 1fr, 0, normal);
 	grid-template-areas: 'nav container';
 	font-family: 'Montserrat', sans-serif;
+  font-size: clamp(0.75rem, 0.679rem + 0.357vw, 1rem);
 }
 
 /* Styles for navbar */
@@ -205,11 +206,6 @@ body {
 	grid-area: main;
 	padding: $space-xl 0;
   background-color: $bg-clr-main;
-
-  h2 {
-    margin-block-end: $space-sm;
-  }
-  
 }
 
 .main__content {
@@ -225,6 +221,7 @@ body {
   }
 
   h2 {
+    margin-block-end: $space-sm;
     font-size: clamp(1.2rem, 1.114rem + 0.429vw, 1.5rem);
   }
 }
@@ -244,7 +241,7 @@ body {
   @include card;
 
  h3 {
-  font-size: clamp(0.7rem, 0.543rem + 0.786vw, 1.25rem);
+  font-size: clamp(0.938rem, 0.848rem + 0.446vw, 1.25rem);
   margin-block-end: $space-sm;
  }
 }
@@ -266,22 +263,20 @@ body {
   @include card;
   margin-block-end: $space-xl;
   border-left: 10px solid $accent-clr-3;
-  
+  font-size: clamp(0.75rem, 0.714rem + 0.179vw, 0.875rem);
 }
 
 .announcement:nth-child(1) {
 	padding-block-end: $space-md;
-	font-size: $fs-announcement;
+	
 }
 
 .announcement:nth-child(2) {
 	padding-block: $space-md;
-	font-size: $fs-announcement;
 }
 
 .announcement:nth-child(3) {
 	padding-block-start: $space-md;
-	font-size: $fs-announcement;
 }
 
 .announcement:not(:last-child) {

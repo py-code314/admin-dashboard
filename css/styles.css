@@ -38,6 +38,7 @@ body {
   align-items: normal;
   grid-template-areas: "nav container";
   font-family: "Montserrat", sans-serif;
+  font-size: clamp(0.75rem, 0.679rem + 0.357vw, 1rem);
 }
 
 /* Styles for navbar */
@@ -260,9 +261,6 @@ body {
   padding: 2rem 0;
   background-color: hsl(199, 64%, 90%);
 }
-.main h2 {
-  margin-block-end: 0.625rem;
-}
 
 .main__content {
   display: grid;
@@ -281,6 +279,7 @@ body {
   }
 }
 .main__content h2 {
+  margin-block-end: 0.625rem;
   font-size: clamp(1.2rem, 1.114rem + 0.429vw, 1.5rem);
 }
 
@@ -302,7 +301,7 @@ body {
   box-shadow: 5px 5px 10px 0px rgba(0, 0, 0, 0.75);
 }
 .project h3 {
-  font-size: clamp(0.7rem, 0.543rem + 0.786vw, 1.25rem);
+  font-size: clamp(0.938rem, 0.848rem + 0.446vw, 1.25rem);
   margin-block-end: 0.625rem;
 }
 
@@ -326,21 +325,19 @@ body {
   box-shadow: 5px 5px 10px 0px rgba(0, 0, 0, 0.75);
   margin-block-end: 2rem;
   border-left: 10px solid hsl(185, 100%, 23%);
+  font-size: clamp(0.75rem, 0.714rem + 0.179vw, 0.875rem);
 }
 
 .announcement:nth-child(1) {
   padding-block-end: 1rem;
-  font-size: 0.875rem;
 }
 
 .announcement:nth-child(2) {
   padding-block: 1rem;
-  font-size: 0.875rem;
 }
 
 .announcement:nth-child(3) {
   padding-block-start: 1rem;
-  font-size: 0.875rem;
 }
 
 .announcement:not(:last-child) {
