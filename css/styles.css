@@ -133,6 +133,7 @@ body {
   outline: 1px solid hsl(2, 78%, 60%);
 }
 
+/* Media query at 768px */
 @media (max-width: 48em) {
   .nav__links-top {
     margin-block-end: 1rem;
@@ -173,7 +174,7 @@ body {
   align-items: normal;
 }
 
-/* Media queries at 840px */
+/* Media queries at 768px */
 @media (max-width: 48em) {
   .header__row1 {
     display: grid;
