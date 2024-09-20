@@ -47,8 +47,21 @@ body {
 		text-decoration: none;
     font-weight: $fw-medium;
     font-size: $fs-navlink;
+    display: inline-block;
+    // padding: $space-xs;
+    transition: all 0.3s ease;
 	}
+
+  a:hover { 
+    @include hover;
+  }
+  a:focus {
+  @include hover;
+  outline: 1px solid $focus-clr;
 }
+}
+
+
 
 .container {
 	grid-area: container;
@@ -87,6 +100,10 @@ body {
 		border-radius: 50px;
 		padding: $space-xs;
 	}
+
+  input:focus {
+    outline: 2px solid $focus-clr;
+  }
 }
 
 .header__profile {
@@ -95,7 +112,13 @@ body {
 	a {
 		justify-self: end;
 		align-self: center;
+    transition: all 0.3s ease;
 	}
+  a:hover,
+  a:focus {
+    outline: none;
+    transform: scale(1.5);
+  }
 	img {
 		place-self: center;
 	}
@@ -130,7 +153,12 @@ body {
 		background-color: $bg-clr-navbar;
 		color: $txt-clr-nav;
 		padding: $space-xs $space-sm;
+    cursor: pointer;
+    transition: all 0.3s;
 	}
+  button:focus {
+    outline: 2px solid $focus-clr;
+  }
 }
 
 .main {

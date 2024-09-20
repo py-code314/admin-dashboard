@@ -109,6 +109,21 @@ body {
   text-decoration: none;
   font-weight: 500;
   font-size: 1.25rem;
+  display: inline-block;
+  transition: all 0.3s ease;
+}
+.nav__links-top a:hover,
+.nav__links-bottom a:hover {
+  background-color: #035177;
+  padding: 5px;
+  border-radius: 5px;
+}
+.nav__links-top a:focus,
+.nav__links-bottom a:focus {
+  background-color: #035177;
+  padding: 5px;
+  border-radius: 5px;
+  outline: 1px solid hsl(2, 78%, 60%);
 }
 
 .container {
@@ -155,6 +170,9 @@ body {
   border-radius: 50px;
   padding: 0.3125rem;
 }
+.header__searchbar input:focus {
+  outline: 2px solid hsl(2, 78%, 60%);
+}
 
 .header__profile {
   display: grid;
@@ -165,6 +183,12 @@ body {
 .header__profile a {
   justify-self: end;
   align-self: center;
+  transition: all 0.3s ease;
+}
+.header__profile a:hover,
+.header__profile a:focus {
+  outline: none;
+  transform: scale(1.5);
 }
 .header__profile img {
   place-self: center;
@@ -202,6 +226,11 @@ body {
   background-color: hsl(200, 95%, 14%);
   color: hsl(0, 0%, 100%);
   padding: 0.3125rem 0.625rem;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+.header__buttons button:focus {
+  outline: 2px solid hsl(2, 78%, 60%);
 }
 
 .main {
