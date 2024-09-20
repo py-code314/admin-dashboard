@@ -10,6 +10,15 @@ body {
 	grid-template-areas: 'nav container';
 	font-family: 'Montserrat', sans-serif;
   font-size: clamp(0.75rem, 0.679rem + 0.357vw, 1rem);
+
+  @include respond {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto 1fr;
+    grid-template-areas: 
+      'nav'
+      'container';
+  }
 }
 
 /* Styles for navbar */
@@ -21,6 +30,10 @@ body {
 	row-gap: $space-2xl;
 	align-content: start;
 	color: $txt-clr-nav;
+
+  @include respond {
+    row-gap: $space-sm;
+  }
 }
 
 .nav__heading {
@@ -30,11 +43,21 @@ body {
 		font-family: 'Cabin Sketch', sans-serif;
     font-size: clamp(1.5rem, 1.179rem + 1.607vw, 2.625rem);
 	}
+  button {
+    background-color: $bg-clr-navbar;
+    border: 1px solid $bg-clr-navbar;
+    cursor: pointer;
+  }
 }
 
 .nav__links {
   @include grid-row($space-2xl);
   padding-inline-start: $space-sm;
+
+  @include respond {
+    // gap: $space-sm;
+    display: none;
+  }
 }
 
 .nav__links-top,
@@ -43,6 +66,9 @@ body {
 
 	li {
     @include grid-col-2(1fr, 6fr, $space-md, center);
+    @include respond {
+      gap: 0;
+    }
 	}
 
 	a {
@@ -62,6 +88,12 @@ body {
   @include hover;
   outline: 1px solid $focus-clr;
 }
+}
+
+.nav__links-top {
+  @include respond {
+    margin-block-end: $space-md;
+  }
 }
 
 /* Styles for Header and Main */
