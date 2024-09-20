@@ -1,59 +1,35 @@
+/* Import fonts */
 @import url("https://fonts.googleapis.com/css2?family=Cabin+Sketch:wght@400;700&family=Cabin:ital,wght@0,400..700;1,400..700&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
-/*
-  1. Use a more-intuitive box-sizing model.
-*/
+/* Reset */
 *, *::before, *::after {
   box-sizing: border-box;
 }
 
-/*
-  2. Remove default margin
-*/
 * {
   margin: 0;
   padding: 0;
 }
 
-/*
-  Typographic tweaks!
-  3. Add accessible line-height
-  4. Improve text rendering
-*/
 body {
   line-height: 1.5;
   -webkit-font-smoothing: antialiased;
 }
 
-/*
-  5. Improve media defaults
-*/
-img, picture, video, canvas, svg {
+img, svg {
   display: block;
   max-inline-size: 100%;
   block-size: auto;
 }
 
-/*
-  6. Remove built-in form typography styles
-*/
 input, button, textarea, select {
   font: inherit;
 }
 
-/*
-  7. Avoid text overflows
-*/
 p, h1, h2, h3, h4, h5, h6 {
   overflow-wrap: break-word;
 }
 
-/*
-  8. Create a root stacking context
-*/
-#root, #__next {
-  isolation: isolate;
-}
-
+/* Styles for body */
 body {
   min-height: 100svh;
   display: grid;
@@ -64,6 +40,7 @@ body {
   font-family: "Montserrat", sans-serif;
 }
 
+/* Styles for navbar */
 .navbar {
   grid-area: nav;
   background-color: hsl(200, 95%, 14%);
@@ -126,6 +103,7 @@ body {
   outline: 1px solid hsl(2, 78%, 60%);
 }
 
+/* Styles for Header and Main */
 .container {
   grid-area: container;
   display: grid;
@@ -135,6 +113,7 @@ body {
   grid-template-areas: "header" "main";
 }
 
+/* Styles for Header */
 .header {
   grid-area: header;
   position: sticky;
@@ -158,6 +137,7 @@ body {
   align-items: normal;
 }
 
+/* Media queries at 840px */
 @media (max-width: 52.5em) {
   .header__row1 {
     justify-items: stretch;
@@ -274,6 +254,7 @@ body {
   outline: 2px solid hsl(2, 78%, 60%);
 }
 
+/* Styles for Main */
 .main {
   grid-area: main;
   padding: 2rem 0;
@@ -303,12 +284,14 @@ body {
   font-size: clamp(1.2rem, 1.114rem + 0.429vw, 1.5rem);
 }
 
+/* Make Projects section responsive */
 .projects {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   gap: 1rem;
 }
 
+/* Styles for project card */
 .project {
   display: grid;
   grid-template-rows: 1fr 3fr 1fr;
@@ -319,7 +302,7 @@ body {
   box-shadow: 5px 5px 10px 0px rgba(0, 0, 0, 0.75);
 }
 .project h3 {
-  font-size: 1.25rem;
+  font-size: clamp(0.7rem, 0.543rem + 0.786vw, 1.25rem);
   margin-block-end: 0.625rem;
 }
 
@@ -334,6 +317,7 @@ body {
   place-items: end;
 }
 
+/* Styles for Announcements section */
 .announcements__content {
   display: grid;
   border-radius: 10px;
@@ -363,6 +347,7 @@ body {
   border-bottom: 1px solid hsl(0, 0%, 50%);
 }
 
+/* Styles for Trending section */
 .trending__title {
   margin-block: 1rem;
 }

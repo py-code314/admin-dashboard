@@ -1,5 +1,6 @@
 @use './variables' as *;
 
+// Two column grid
 @mixin grid-col-2($col1, $col2, $gap, $ai) {
   display: grid;
   grid-template-columns: $col1 $col2;
@@ -7,6 +8,7 @@
   align-items: $ai;
 }
 
+// Three column grid
 @mixin grid-col-3($col1, $col2, $col3, $gap, $ai) {
   display: grid;
   grid-template-columns: $col1 $col2 $col3;
@@ -14,12 +16,13 @@
   align-items: $ai;
 }
 
-
+// Create grid rows
 @mixin grid-row($gap) {
   display: grid;
   gap: $gap;
 }
 
+// Styling for cards
 @mixin card {
   border-radius: 10px;
 	padding: $space-lg;
@@ -27,12 +30,14 @@
  box-shadow: 5px 5px 10px 0px rgba(0,0,0,0.75);
 }
 
+// Styling for hover and focus
 @mixin hover {
   background-color: lighten($bg-clr-navbar, 10%);
   padding: 5px;
   border-radius: 5px;
 }
 
+// Media query
 @mixin respond {
   @media (max-width: 52.5em) {
     @content;
