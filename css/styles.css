@@ -52,6 +52,11 @@ body {
 /* Styles for navbar */
 .navbar {
   grid-area: nav;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 15rem;
+  height: 100vh;
   background-color: hsl(200, 95%, 14%);
   padding: 1rem;
   display: grid;
@@ -62,6 +67,9 @@ body {
 @media (max-width: 48em) {
   .navbar {
     row-gap: 0.625rem;
+    position: static;
+    height: auto;
+    width: 100%;
   }
 }
 
@@ -122,20 +130,19 @@ body {
   text-decoration: none;
   font-weight: 500;
   font-size: clamp(0.7rem, 0.543rem + 0.786vw, 1.25rem);
-  display: inline-block;
   transition: all 0.3s ease;
 }
 .nav__links-top a:hover,
 .nav__links-bottom a:hover {
-  background-color: #035177;
-  padding: 5px;
+  background-color: #0472a9;
   border-radius: 5px;
+  transform: scale(1.1) translateX(2px);
 }
 .nav__links-top a:focus,
 .nav__links-bottom a:focus {
-  background-color: #035177;
-  padding: 5px;
+  background-color: #0472a9;
   border-radius: 5px;
+  transform: scale(1.1) translateX(2px);
   outline: 1px solid hsl(2, 78%, 60%);
 }
 
@@ -208,7 +215,7 @@ body {
   align-self: center;
   border: 1px solid hsl(192, 70%, 43%);
   border-radius: 50px;
-  padding: clamp(0rem, -0.136rem + 0.68vw, 0.476rem);
+  padding: clamp(0rem, -0.136rem + 0.68vw, 0.476rem) clamp(0rem, -0.2143rem + 1.0714vw, 0.75rem);
 }
 .header__searchbar input:focus {
   outline: 2px solid hsl(2, 78%, 60%);

@@ -32,9 +32,9 @@
 
 // Styling for hover and focus
 @mixin hover {
-  background-color: lighten($bg-clr-navbar, 10%);
-  padding: 5px;
+  background-color: lighten($bg-clr-navbar, 20%);
   border-radius: 5px;
+  transform: scale(1.1) translateX(2px);
 }
 
 // Media query
