@@ -24,7 +24,7 @@ body {
 /* Styles for navbar */
 .navbar {
 	grid-area: nav;
-  position: fixed;
+  position: fixed; // Fixed navbar at the top
   top: 0;
   left: 0;
   width: 15rem;
@@ -47,7 +47,6 @@ body {
 
 .nav__heading {
   @include grid-col-2(40px, 1fr, $space-xs, center);
-
 	h1 {
 		font-family: 'Cabin Sketch', sans-serif;
     font-size: clamp(1.5rem, 1.3rem + 1vw, 2.2rem);
@@ -91,7 +90,6 @@ body {
 		text-decoration: none;
     font-weight: $fw-medium;
     font-size: clamp(0.7rem, 0.543rem + 0.786vw, 1.25rem);
-    // display: inline-block;
     transition: all 0.3s ease;
 	}
 
@@ -274,6 +272,8 @@ body {
   @include grid-col-2(2fr, 1fr, $space-xl, normal);
   width: min(90%, 1200px);
   margin: auto;
+  
+ 
 
   // Media query at 768px
   @include tablet {
@@ -318,11 +318,6 @@ body {
 	grid-template-columns: 4fr 1fr 1fr;
 	place-items: end;
 }
-
-// .sidebars {
-//   position: sticky;
-//   top: 40px;
-// }
 
 /* Styles for Announcements section */
 .announcements__content {
