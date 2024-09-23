@@ -319,6 +319,18 @@ body {
 	place-items: end;
 }
 
+.sidebars {
+  
+  position: sticky;
+  top: 200px;
+  height: fit-content;
+  
+  
+}
+
+
+
+
 /* Styles for Announcements section */
 .announcements__content {
 	display: grid;
